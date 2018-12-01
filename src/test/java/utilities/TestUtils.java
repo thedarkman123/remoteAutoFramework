@@ -33,7 +33,7 @@ public class TestUtils extends BaseTest {
 	}
 	
 	public static String captureScreenshot(String fileName,String directory) {
-		String pathToFile = System.getProperty("user.dir") + "\\src\\test\\resources\\screenshots\\" + directory +"\\"+ fileName + ".png";
+		String pathToFile = System.getProperty("user.dir") + "\\src\\test\\resources\\screenshots\\" + directory +"\\"+ getCurrentTime()+fileName + ".png";
 		try {
 			File scrFile = ((TakesScreenshot)getWrapperInstance().getWebDriver()).getScreenshotAs(OutputType.FILE);
 			File newFileToCreate = new File(pathToFile);	

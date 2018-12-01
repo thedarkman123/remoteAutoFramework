@@ -25,17 +25,17 @@ public class RemoteWebDriverWrapper {
 		private RemoteWebDriver rwb = null;
 		
 		public String getBrowserName() {
-		    Capabilities cap = rwb.getCapabilities();
+		    Capabilities cap = ((RemoteWebDriver) getWebDriver()).getCapabilities();
 		    return cap.getBrowserName().toLowerCase();
 		}
 		
 		public String getPlatform() {
-			Capabilities cap = rwb.getCapabilities();
+			Capabilities cap = ((RemoteWebDriver) getWebDriver()).getCapabilities();
 			return cap.getPlatform().toString();
 		}
 		
 		public String getVersion() {
-			Capabilities cap = rwb.getCapabilities();
+			Capabilities cap = ((RemoteWebDriver) getWebDriver()).getCapabilities();
 			return cap.getVersion().toString();
 		}
 		

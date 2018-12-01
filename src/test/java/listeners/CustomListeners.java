@@ -22,7 +22,13 @@ public class CustomListeners extends TestUtils implements ITestListener {
 		// TODO Auto-generated method stub
 		System.out.println(result.getName().toString() + " success");
 		getExtentTest().log(LogStatus.PASS, result.getName() + " PASSED");
-		getReportInstance().endTest(test);
+		
+		String fileName    = result.getName() + TestUtils.getCurrentTime();
+		String browserName = TestUtils.getWrapperInstance().getBrowserName();
+		String pathToFile  = TestUtils.captureScreenshot(fileName,browserName);
+		getExtentTest().log(LogStatus.INFO,getExtentTest().addScreenCapture(pathToFile));
+		
+		getReportInstance().endTest(getExtentTest());
 		getReportInstance().flush();
 	}
 

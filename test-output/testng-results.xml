@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Remote Suite" duration-ms="29809" started-at="2018-12-01T13:08:59Z" finished-at="2018-12-01T13:09:29Z">
+  <suite name="Remote Suite" duration-ms="45497" started-at="2018-12-01T13:54:03Z" finished-at="2018-12-01T13:54:49Z">
     <groups>
     </groups>
-    <test name="HappyFlowFirefoxTest" duration-ms="28829" started-at="2018-12-01T13:08:59Z" finished-at="2018-12-01T13:09:28Z">
+    <test name="HappyFlowFirefoxTest" duration-ms="39461" started-at="2018-12-01T13:54:03Z" finished-at="2018-12-01T13:54:43Z">
       <class name="testcases.RemoteFlowTest">
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:testcases.RemoteFlowTest@2e3fc542]" name="setup" is-config="true" duration-ms="15247" started-at="2018-12-01T13:08:59Z" finished-at="2018-12-01T13:09:14Z">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:testcases.RemoteFlowTest@2e3fc542]" name="setup" is-config="true" duration-ms="18566" started-at="2018-12-01T13:54:03Z" finished-at="2018-12-01T13:54:22Z">
           <params>
             <param index="0">
               <value>
@@ -18,19 +18,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test1()[pri:0, instance:testcases.RemoteFlowTest@2e3fc542]" name="test1" duration-ms="10693" started-at="2018-12-01T13:09:14Z" finished-at="2018-12-01T13:09:25Z">
+        <test-method status="PASS" signature="test1()[pri:0, instance:testcases.RemoteFlowTest@2e3fc542]" name="test1" duration-ms="12822" started-at="2018-12-01T13:54:22Z" finished-at="2018-12-01T13:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.RemoteFlowTest@2e3fc542]" name="teardown" is-config="true" duration-ms="2567" started-at="2018-12-01T13:09:25Z" finished-at="2018-12-01T13:09:28Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.RemoteFlowTest@2e3fc542]" name="teardown" is-config="true" duration-ms="3117" started-at="2018-12-01T13:54:40Z" finished-at="2018-12-01T13:54:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- testcases.RemoteFlowTest -->
     </test> <!-- HappyFlowFirefoxTest -->
-    <test name="HappyFlowChromeTest" duration-ms="29453" started-at="2018-12-01T13:08:59Z" finished-at="2018-12-01T13:09:28Z">
+    <test name="HappyFlowChromeTest" duration-ms="45234" started-at="2018-12-01T13:54:03Z" finished-at="2018-12-01T13:54:49Z">
       <class name="testcases.RemoteFlowTest">
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:testcases.RemoteFlowTest@64f6106c]" name="setup" is-config="true" duration-ms="11267" started-at="2018-12-01T13:08:59Z" finished-at="2018-12-01T13:09:10Z">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:testcases.RemoteFlowTest@64f6106c]" name="setup" is-config="true" duration-ms="14483" started-at="2018-12-01T13:54:03Z" finished-at="2018-12-01T13:54:18Z">
           <params>
             <param index="0">
               <value>
@@ -41,19 +41,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test1()[pri:0, instance:testcases.RemoteFlowTest@64f6106c]" name="test1" duration-ms="17958" started-at="2018-12-01T13:09:10Z" finished-at="2018-12-01T13:09:28Z">
+        <test-method status="PASS" signature="test1()[pri:0, instance:testcases.RemoteFlowTest@64f6106c]" name="test1" duration-ms="25711" started-at="2018-12-01T13:54:18Z" finished-at="2018-12-01T13:54:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.RemoteFlowTest@64f6106c]" name="teardown" is-config="true" duration-ms="169" started-at="2018-12-01T13:09:28Z" finished-at="2018-12-01T13:09:28Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.RemoteFlowTest@64f6106c]" name="teardown" is-config="true" duration-ms="186" started-at="2018-12-01T13:54:48Z" finished-at="2018-12-01T13:54:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- testcases.RemoteFlowTest -->
     </test> <!-- HappyFlowChromeTest -->
-    <test name="testim" duration-ms="29809" started-at="2018-12-01T13:08:59Z" finished-at="2018-12-01T13:09:29Z">
+    <test name="testim" duration-ms="45497" started-at="2018-12-01T13:54:03Z" finished-at="2018-12-01T13:54:49Z">
       <class name="testcases.RemoteFlowTest">
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:testcases.RemoteFlowTest@43a0cee9]" name="setup" is-config="true" duration-ms="11290" started-at="2018-12-01T13:08:59Z" finished-at="2018-12-01T13:09:10Z">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:testcases.RemoteFlowTest@43a0cee9]" name="setup" is-config="true" duration-ms="14636" started-at="2018-12-01T13:54:03Z" finished-at="2018-12-01T13:54:18Z">
           <params>
             <param index="0">
               <value>
@@ -64,11 +64,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test1()[pri:0, instance:testcases.RemoteFlowTest@43a0cee9]" name="test1" duration-ms="18205" started-at="2018-12-01T13:09:10Z" finished-at="2018-12-01T13:09:29Z">
+        <test-method status="PASS" signature="test1()[pri:0, instance:testcases.RemoteFlowTest@43a0cee9]" name="test1" duration-ms="25732" started-at="2018-12-01T13:54:18Z" finished-at="2018-12-01T13:54:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.RemoteFlowTest@43a0cee9]" name="teardown" is-config="true" duration-ms="256" started-at="2018-12-01T13:09:29Z" finished-at="2018-12-01T13:09:29Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.RemoteFlowTest@43a0cee9]" name="teardown" is-config="true" duration-ms="345" started-at="2018-12-01T13:54:48Z" finished-at="2018-12-01T13:54:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
