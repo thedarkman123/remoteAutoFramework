@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Stellares Suite">
+ <listeners>
+ 	<listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
+ 	<listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener>
+ 	<listener class-name="listeners.CustomListeners"></listener>
+ </listeners>
+  <test name="HappyFlowChromeTest">
+	  <parameter name="browser" value="chrome">
+		   <classes>
+		      <class name="testcases.NewFlowTest"/>
+		   </classes>
+	  </parameter>
+  </test> 
+    <test name="HappyFlowFirefoxTest">
+	  <parameter name="browser" value="chrome">
+		   <classes>
+		      <class name="testcases.NewFlowTest"/>
+		   </classes>
+	  </parameter>
+  	</test> 
+  
+</suite> <!-- Suite -->
