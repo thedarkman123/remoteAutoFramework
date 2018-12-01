@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Remote Suite" duration-ms="29809" started-at="2018-12-01T13:08:59Z" finished-at="2018-12-01T13:09:29Z">
+    <groups>
+    </groups>
+    <test name="HappyFlowFirefoxTest" duration-ms="28829" started-at="2018-12-01T13:08:59Z" finished-at="2018-12-01T13:09:28Z">
+      <class name="testcases.RemoteFlowTest">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:testcases.RemoteFlowTest@2e3fc542]" name="setup" is-config="true" duration-ms="15247" started-at="2018-12-01T13:08:59Z" finished-at="2018-12-01T13:09:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test1()[pri:0, instance:testcases.RemoteFlowTest@2e3fc542]" name="test1" duration-ms="10693" started-at="2018-12-01T13:09:14Z" finished-at="2018-12-01T13:09:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.RemoteFlowTest@2e3fc542]" name="teardown" is-config="true" duration-ms="2567" started-at="2018-12-01T13:09:25Z" finished-at="2018-12-01T13:09:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- testcases.RemoteFlowTest -->
+    </test> <!-- HappyFlowFirefoxTest -->
+    <test name="HappyFlowChromeTest" duration-ms="29453" started-at="2018-12-01T13:08:59Z" finished-at="2018-12-01T13:09:28Z">
+      <class name="testcases.RemoteFlowTest">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:testcases.RemoteFlowTest@64f6106c]" name="setup" is-config="true" duration-ms="11267" started-at="2018-12-01T13:08:59Z" finished-at="2018-12-01T13:09:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test1()[pri:0, instance:testcases.RemoteFlowTest@64f6106c]" name="test1" duration-ms="17958" started-at="2018-12-01T13:09:10Z" finished-at="2018-12-01T13:09:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.RemoteFlowTest@64f6106c]" name="teardown" is-config="true" duration-ms="169" started-at="2018-12-01T13:09:28Z" finished-at="2018-12-01T13:09:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- testcases.RemoteFlowTest -->
+    </test> <!-- HappyFlowChromeTest -->
+    <test name="testim" duration-ms="29809" started-at="2018-12-01T13:08:59Z" finished-at="2018-12-01T13:09:29Z">
+      <class name="testcases.RemoteFlowTest">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:testcases.RemoteFlowTest@43a0cee9]" name="setup" is-config="true" duration-ms="11290" started-at="2018-12-01T13:08:59Z" finished-at="2018-12-01T13:09:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test1()[pri:0, instance:testcases.RemoteFlowTest@43a0cee9]" name="test1" duration-ms="18205" started-at="2018-12-01T13:09:10Z" finished-at="2018-12-01T13:09:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.RemoteFlowTest@43a0cee9]" name="teardown" is-config="true" duration-ms="256" started-at="2018-12-01T13:09:29Z" finished-at="2018-12-01T13:09:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- testcases.RemoteFlowTest -->
+    </test> <!-- testim -->
+  </suite> <!-- Remote Suite -->
+</testng-results>

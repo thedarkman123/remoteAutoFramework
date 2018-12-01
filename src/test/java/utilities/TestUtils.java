@@ -18,6 +18,15 @@ public class TestUtils extends BaseTest {
 	//extent report bit, used in the listeners
 	private static ExtentReports rep = ExtentManager.getInstance();
 	public static ExtentTest test;
+	public static ThreadLocal<ExtentTest> exTest = new ThreadLocal<ExtentTest>();
+	
+	public void setExtentTest(ExtentTest et) {
+		exTest.set(et);
+	}
+	
+	public ExtentTest getExtentTest() {
+		return exTest.get();
+	}
 	
 	public ExtentReports getReportInstance() {
 		return rep;

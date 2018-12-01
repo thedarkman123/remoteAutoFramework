@@ -15,30 +15,28 @@ public class CustomListeners extends TestUtils implements ITestListener {
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
 		test = getReportInstance().startTest(result.getName());
+		setExtentTest(test); //unique thread
 	}
 
 	public void onTestSuccess(ITestResult result) {
 		// TODO Auto-generated method stub
 		System.out.println(result.getName().toString() + " success");
-		test.log(LogStatus.PASS, result.getName() + " PASSED");
+		getExtentTest().log(LogStatus.PASS, result.getName() + " PASSED");
 		getReportInstance().endTest(test);
 		getReportInstance().flush();
 	}
 
 	public void onTestFailure(ITestResult result) {	
-//		System.setProperty("org.uncommons.reportng.escape-output", "false");
-//		String fileName    = result.getName() + TestUtils.getCurrentTime();
-//		String browserName = TestUtils.getWrapperInstance().getBrowserName();
-//		String pathToFile  = TestUtils.captureScreenshot(fileName,browserName);
-//		String errToPrint  = HtmlEscapers.htmlEscaper().escape(result.getThrowable().getMessage().toString());
-//		
-//		Reporter.log(result.getName() + " failed: " + errToPrint);
-//		Reporter.log("<a target=\"_blank\" href=" + pathToFile + ">Screenshot</a>");
-//	
-//		test.log(LogStatus.FAIL, result.getName() + " Failed,exception: " + errToPrint);
-//		test.log(LogStatus.FAIL,test.addScreenCapture(pathToFile));
-//		getReportInstance().endTest(test);
-//		getReportInstance().flush();
+		System.setProperty("org.uncommons.reportng.escape-output", "false");
+		String fileName    = result.getName() + TestUtils.getCurrentTime();
+		String browserName = TestUtils.getWrapperInstance().getBrowserName();
+		String pathToFile  = TestUtils.captureScreenshot(fileName,browserName);
+		String errToPrint  = HtmlEscapers.htmlEscaper().escape(result.getThrowable().getMessage().toString());
+		
+		getExtentTest().log(LogStatus.FAIL, result.getName() + " Failed,exception: " + errToPrint);
+		getExtentTest().log(LogStatus.FAIL,test.addScreenCapture(pathToFile));
+		getReportInstance().endTest(getExtentTest());
+		getReportInstance().flush();
 	}
 
 	public void onTestSkipped(ITestResult result) {

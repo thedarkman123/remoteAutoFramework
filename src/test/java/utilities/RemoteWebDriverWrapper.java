@@ -5,6 +5,7 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -22,6 +23,21 @@ public class RemoteWebDriverWrapper {
 	    //for thread context, seperate the instances of the program
 		public static ThreadLocal<RemoteWebDriver> dr = new ThreadLocal<RemoteWebDriver>();	
 		private RemoteWebDriver rwb = null;
+		
+		public String getBrowserName() {
+		    Capabilities cap = rwb.getCapabilities();
+		    return cap.getBrowserName().toLowerCase();
+		}
+		
+		public String getPlatform() {
+			Capabilities cap = rwb.getCapabilities();
+			return cap.getPlatform().toString();
+		}
+		
+		public String getVersion() {
+			Capabilities cap = rwb.getCapabilities();
+			return cap.getVersion().toString();
+		}
 		
 		public void init(String browser,String remoteHubUrl) throws MalformedURLException {
 			DesiredCapabilities cap = null;
