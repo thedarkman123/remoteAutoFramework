@@ -2,6 +2,9 @@ package testcases;
 
 import java.net.MalformedURLException;
 
+import org.apache.log4j.FileAppender;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PatternLayout;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
@@ -9,15 +12,31 @@ import org.testng.annotations.Parameters;
 import pageobject.GenericPageObject;
 import utilities.PropertiesWrapper;
 import utilities.RemoteWebDriverWrapper;
+import utilities.TestUtils;
 import utilities.WebDriverWrapper;
 
 public class BaseTest {
 	protected static RemoteWebDriverWrapper rdw;
 	protected PropertiesWrapper or; //object repository
+	public static Logger log;
 	
 	@BeforeMethod
 	@Parameters("browser")
 	public void setup(String browser) {
+		String fileString = TestUtils.generateString(5);
+		//initialize log
+		FileAppender appender = new FileAppender();
+        appender.setFile("logs/" + fileString +".log");
+        appender.setLayout(new PatternLayout("%d [%t] %-5p %c - %m%n"));
+        appender.activateOptions();
+
+        // Get logger and add appender
+        log = Logger.getLogger(fileString);
+        log.setAdditivity(false);
+        log.addAppender(appender);
+		
+        log.info("shalom");
+		
 		//a wrapper for properties, or stands for OBJECT REPOSITORY 
 		or = new PropertiesWrapper("OR");
 		//a wrapper for the webdriver

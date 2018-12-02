@@ -8,6 +8,7 @@ import org.testng.Reporter;
 import com.google.common.html.HtmlEscapers;
 import com.relevantcodes.extentreports.LogStatus;
 
+import utilities.LoggerWrapper;
 import utilities.TestUtils;
 
 public class CustomListeners extends TestUtils implements ITestListener {
@@ -16,6 +17,8 @@ public class CustomListeners extends TestUtils implements ITestListener {
 		// TODO Auto-generated method stub
 		test = getReportInstance().startTest(result.getName());
 		setExtentTest(test); //unique thread
+//		LoggerWrapper.init(System.getProperty("user.dir")+
+//		"\\logs\\"+getCurrentTime()+".log","randomNamedLog");
 	}
 
 	public void onTestSuccess(ITestResult result) {
@@ -41,6 +44,7 @@ public class CustomListeners extends TestUtils implements ITestListener {
 		
 		getExtentTest().log(LogStatus.FAIL, result.getName() + " Failed,exception: " + errToPrint);
 		getExtentTest().log(LogStatus.FAIL,test.addScreenCapture(pathToFile));
+		
 		getReportInstance().endTest(getExtentTest());
 		getReportInstance().flush();
 	}
