@@ -2,6 +2,7 @@ package testcases;
 
 import java.net.MalformedURLException;
 
+import org.apache.log4j.Appender;
 import org.apache.log4j.FileAppender;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PatternLayout;
@@ -18,7 +19,30 @@ import utilities.WebDriverWrapper;
 public class BaseTest {
 	protected static RemoteWebDriverWrapper rdw;
 	protected PropertiesWrapper or; //object repository
+	
 	public static Logger log;
+	public static ThreadLocal<Logger> loggerThread= 
+			 new ThreadLocal<Logger>();
+	
+	public static ThreadLocal<FileAppender> appenderThread= 
+			 new ThreadLocal<FileAppender>();	
+	
+	 public static void setAppender(FileAppender ap) {
+		 appenderThread.set(ap);
+	 }
+	
+	public static FileAppender getAppender() {
+		return appenderThread.get();
+	}
+	
+	 public static void setLogger(Logger lg) {
+		 loggerThread.set(lg);
+	 }
+	
+	public static Logger getLogger() {
+		return loggerThread.get();
+	}
+	
 	
 	@BeforeMethod
 	@Parameters("browser")
@@ -29,13 +53,14 @@ public class BaseTest {
         appender.setFile("logs/" + fileString +".log");
         appender.setLayout(new PatternLayout("%d [%t] %-5p %c - %m%n"));
         appender.activateOptions();
-
+        setAppender(appender);
         // Get logger and add appender
         log = Logger.getLogger(fileString);
         log.setAdditivity(false);
-        log.addAppender(appender);
-		
-        log.info("shalom");
+        log.addAppender(getAppender());		
+        setLogger(log);
+        
+        getLogger().info("testing");
 		
 		//a wrapper for properties, or stands for OBJECT REPOSITORY 
 		or = new PropertiesWrapper("OR");
